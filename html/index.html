@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Estudando comandos GIT</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Comandos</th>
+                <th>Quando e como usar</th>
+                <th>O que faz</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    git config<br/>
+                    $git config --global user.name "Seu nome aqui"<br>
+                    $git config --global user.email "usuario@email.com"
+                </td>
+                <td>
+                    git config deve ser usado para fazer<br> a
+                    configuração do usuário no git bash, deve ser
+                    passado exatamente o mesmo usuário e senha
+                    usado no github
+                </td>
+                <td>
+                    Configura o git no computador do<br>
+                    desenvolvedor(a), passando nome e email
+                    do github para que possa ser iniciado um novo
+                    repositório na máquina do desenvolvedor(a).
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    git init<br>
+                    $git init
+                </td>
+                <td>
+                    Inicia um repositório onde estiver sendo usado o git bash
+                </td>
+                <td>
+                    Cria um pasta oculta com o nome de .git, demonstrando
+                    que ali agora possui um novo repositório git.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    git add<br>
+                    $git add .<br>
+                    $git add caminho/nomeDoArquivo.arquivo
+                </td>
+                <td>
+                    Deve ser usado quando algum arquivo do projeto for
+                    alterado ou criado e houver a necessidade de enviar
+                    essas alterações ao repositório git.
+                </td>
+                <td>
+                    O git add . adiciona todas as alterações efetuadas
+                    de uma vez só para fazer o <strong>commit.</strong><br>
+                    O outro git add adiciona apenas o arquivo que foi passado o nome
+                    e/ou o caminho completo do arquivo.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    git commit<br>
+                    git commit -m<br>
+                    git commit -a -m<br>
+                </td>
+                <td>
+                    Após o comando git add ter sido feito, é hora de enviar
+                    as alterações feitas para o repositório git. Ao realizar
+                    o comando git commit, ele ainda não será enviado ao repositório
+                    git, ficará apenas no repositório local até que seja feito
+                    um <strong>git push</strong>.Todo commit realizado exige
+                    que haja pelo menos uma mensagem, essa mensagem descreve
+                    brevemente o que foi feito.
+                </td>
+                <td>
+                    O git commit -m, passa apenas a mensagem descrevendo a alteração,
+                    há um outro comando alternativo, o git commit -a -m, esse comando
+                    adiciona todos arquivos que foram modificados/criados e também já
+                    passa a mensagem que descreve o que foi feito.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    git push<br>
+                    $git push<br>
+                    $git push origin NomeDaBranch
+                </td>
+                <td>
+                    Após ser feito o git add e o git commit, agora
+                    as modificações devem ser enviadas ao repositório
+                    git, deixando essas mudanças de serem apenas "local".
+                </td>
+                <td>
+                    $git push envia todos os commits que estão local para
+                    a branch que o usuário estiver trabalhando. $git push origin
+                    NomeDaBranch, envia os commits para a branch NomeDaBranch
+                    no repositório git.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    git pull<br>
+                    $git pull<br>
+                    $git pull origin NomeDaBranch
+                </td>
+                <td>
+                    Deve ser usado sempre que houver uma nova versão de uma branch
+                    específica, ou caso o desenvolvedor tenha feito um commit de uma
+                    branch e deseja voltar a ela.
+                </td>
+                <td>
+                    Faz a "cópia" de tudo que está na branch no repositório git
+                    ou no repositório local e caso haja alguma diferença entre
+                    a branch que o desenvolvedor se encontra, com a que foi feita
+                    o pull as modificações serão adicionadas à branch do desenvolvedor.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    git clone<br>
+                    $git clone "URL do repositório"
+                </td>
+                <td>
+                    Deve ser usado sempre que o desenvolvedor desejar clonar um
+                    projeto que esteja no repositório git, criando um repositório local.
+                </td>
+                <td>
+                    Cria um repositório local do repositório git do qual foi passado a url.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    git checkout<br>
+                    git checkout Branch01<br>
+                    git checkout -b Branch02
+                </td>
+                <td>
+                    Sempre que for necessário trocar de uma branch para outra
+                    o comando git checkout deve ser executado.
+                </td>
+                <td>
+                    O comando git checkout Branch01, muda o desenvolvedor de
+                    sua branch atual para a Branch01, o comando
+                    git checkout -b Branch02, cria uma nova branco com o nome
+                    Branch02, e já muda automaticamente para essa branch.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
